@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2wkqyp0cymy1"]
+
+[ext_resource type="Script" uid="uid://bufm5q322axn0" path="res://lessons/lesson_01/player.gd" id="1_mtcgd"]
+[ext_resource type="Resource" uid="uid://ckt7dxk0ntlek" path="res://lessons/lesson_01/player_config.tres" id="2_651jc"]
+[ext_resource type="Texture2D" uid="uid://8bpmpq2wk6tq" path="res://icon.svg" id="3_tjegh"]
+
+[node name="Player" type="Node2D" unique_id=1627025099]
+script = ExtResource("1_mtcgd")
+config = ExtResource("2_651jc")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1973291950]
+modulate = Color(0.66420865, 0.15682766, 0.24879918, 1)
+texture = ExtResource("3_tjegh")

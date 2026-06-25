@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cg2oxtkwxcpln"]
+
+[ext_resource type="PackedScene" uid="uid://b2wkqyp0cymy1" path="res://lessons/lesson_01/player.tscn" id="1_w4oya"]
+
+[node name="Lesson01" type="Node2D" unique_id=216094748]
+
+[node name="Player" parent="." unique_id=1627025099 instance=ExtResource("1_w4oya")]
+position = Vector2(320, 180)
+scale = Vector2(1.5, 1.5)
+
+[node name="ResetButton" type="Button" parent="." unique_id=2116703359]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 60.0
+text = "Reset Player"
+
+[node name="Player2" parent="." unique_id=926383513 instance=ExtResource("1_w4oya")]
+position = Vector2(120, 280)
+scale = Vector2(0.75, 0.75)
+
+[connection signal="pressed" from="ResetButton" to="Player" method="_on_reset_button_pressed"]
