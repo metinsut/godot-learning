@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg2oxtkwxcpln"]
 
-[ext_resource type="PackedScene" uid="uid://b2wkqyp0cymy1" path="res://lessons/lesson_01/player.tscn" id="1_w4oya"]
-[ext_resource type="Resource" uid="uid://b6rm1rewk5m20" path="res://lessons/lesson_01/fast_player_config.tres" id="2_ot3in"]
+[ext_resource type="PackedScene" uid="uid://b2wkqyp0cymy1" path="res://lessons/lesson_01/player/player.tscn" id="1_w4oya"]
+[ext_resource type="Resource" uid="uid://b6rm1rewk5m20" path="res://lessons/lesson_01/player/configs/fast_player_config.tres" id="2_ot3in"]
 [ext_resource type="Script" uid="uid://e6bplxr5ox4g" path="res://lessons/lesson_01/lesson_01.gd" id="3_pbbjn"]
 
 [node name="Lesson01" type="Node2D" unique_id=216094748]
