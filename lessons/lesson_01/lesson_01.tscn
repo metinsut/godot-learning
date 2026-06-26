@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b2wkqyp0cymy1" path="res://lessons/lesson_01/player/player.tscn" id="1_w4oya"]
 [ext_resource type="Resource" uid="uid://b6rm1rewk5m20" path="res://lessons/lesson_01/player/configs/fast_player_config.tres" id="2_ot3in"]
 [ext_resource type="Script" uid="uid://e6bplxr5ox4g" path="res://lessons/lesson_01/lesson_01.gd" id="3_pbbjn"]
+[ext_resource type="PackedScene" uid="uid://cgmexlmvkqkcl" path="res://lessons/lesson_01/coin/coin.tscn" id="4_ptsi8"]
 
 [node name="Lesson01" type="Node2D" unique_id=216094748]
 script = ExtResource("3_pbbjn")
@@ -33,5 +34,16 @@ text = "Reset Player"
 position = Vector2(120, 280)
 scale = Vector2(0.75, 0.75)
 config = ExtResource("2_ot3in")
+
+[node name="Coin" parent="." unique_id=437056062 instance=ExtResource("4_ptsi8")]
+position = Vector2(688, 352)
+scale = Vector2(1.1652666, 1.1652666)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=421260081]
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 81.0
+offset_bottom = 93.0
+text = "Score: 0"
 
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
