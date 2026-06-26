@@ -4,6 +4,17 @@
 
 [node name="Lesson01" type="Node2D" unique_id=216094748]
 
+[node name="Background" type="ColorRect" parent="." unique_id=1819625531]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.60944176, 0.4938358, 0.4175895, 1)
+
 [node name="Player" parent="." unique_id=1627025099 instance=ExtResource("1_w4oya")]
 position = Vector2(320, 180)
 scale = Vector2(1.5, 1.5)
@@ -20,3 +31,4 @@ position = Vector2(120, 280)
 scale = Vector2(0.75, 0.75)
 
 [connection signal="pressed" from="ResetButton" to="Player" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="Player2" method="_on_reset_button_pressed"]
