@@ -35,8 +35,5 @@ func _get_input_direction() -> Vector2:
 		config.down_action,
 	)
 
-func _on_reset_button_pressed() -> void:
-	reset_position()
-
 func reset_position() -> void:
 	position = start_position

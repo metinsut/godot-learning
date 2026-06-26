@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b2wkqyp0cymy1" path="res://lessons/lesson_01/player.tscn" id="1_w4oya"]
 [ext_resource type="Resource" uid="uid://b6rm1rewk5m20" path="res://lessons/lesson_01/fast_player_config.tres" id="2_ot3in"]
+[ext_resource type="Script" uid="uid://e6bplxr5ox4g" path="res://lessons/lesson_01/lesson_01.gd" id="3_pbbjn"]
 
 [node name="Lesson01" type="Node2D" unique_id=216094748]
+script = ExtResource("3_pbbjn")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1819625531]
 custom_minimum_size = Vector2(100, 100)
@@ -32,5 +34,4 @@ position = Vector2(120, 280)
 scale = Vector2(0.75, 0.75)
 config = ExtResource("2_ot3in")
 
-[connection signal="pressed" from="ResetButton" to="Player" method="_on_reset_button_pressed"]
-[connection signal="pressed" from="ResetButton" to="Player2" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
