@@ -11,3 +11,10 @@ config = ExtResource("2_651jc")
 [node name="Body" type="Sprite2D" parent="." unique_id=1973291950]
 modulate = Color(0.66420865, 0.15682766, 0.24879918, 1)
 texture = ExtResource("3_tjegh")
+
+[node name="NameLabel" type="Label" parent="." unique_id=1144453325]
+offset_left = -30.0
+offset_top = -90.0
+offset_right = 19.0
+offset_bottom = -67.0
+text = "Player"

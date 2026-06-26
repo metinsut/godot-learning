@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerConfig" format=3 uid="uid://b6rm1rewk5m20"]
+
+[ext_resource type="Script" uid="uid://cg3qxmfbkrbk5" path="res://lessons/lesson_01/player_config.gd" id="1_wtqfb"]
+
+[resource]
+script = ExtResource("1_wtqfb")
+speed = 800.0
+start_position = Vector2(500, 80)
+body_color = Color(0.45145005, 0.8389096, 0.17090586, 1)
+left_action = &"p2_left"
+right_action = &"p2_right"
+up_action = &"p2_up"
+down_action = &"p2_down"
+display_name = "P2"
+metadata/_custom_type_script = "uid://cg3qxmfbkrbk5"
