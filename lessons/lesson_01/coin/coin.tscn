@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xc83dwnlsmx2" path="res://lessons/lesson_01/coin/coin.gd" id="1_ykj7x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7w55m"]
-radius = 32.0
+radius = 24.91
 
 [node name="Coin" type="Area2D" unique_id=437056062]
 script = ExtResource("1_ykj7x")
@@ -14,3 +14,4 @@ texture = ExtResource("1_7w55m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896256426]
 shape = SubResource("CircleShape2D_7w55m")
+debug_color = Color(0, 0.6124304, 0.7163261, 0.41960785)
