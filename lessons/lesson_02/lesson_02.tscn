@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://f5nfe383vkoe"]
+
+[ext_resource type="Script" uid="uid://cj7y8edtd72kj" path="res://lessons/lesson_02/lesson_02.gd" id="1_h241i"]
+[ext_resource type="PackedScene" uid="uid://dicyu1twmxvic" path="res://lessons/lesson_02/player/player.tscn" id="1_yoauf"]
+[ext_resource type="Script" uid="uid://dvbe14m4gdaw8" path="res://lessons/lesson_02/goal_area.gd" id="2_ddyht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l122j"]
+size = Vector2(40, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnyxq"]
+size = Vector2(1152, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js437"]
+size = Vector2(80, 80)
+
+[node name="Lesson02" type="Node2D" unique_id=134945268]
+script = ExtResource("1_h241i")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=971272532]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.84313726, 0.81960785, 0.81960785, 1)
+
+[node name="Player" parent="." unique_id=925700991 instance=ExtResource("1_yoauf")]
+position = Vector2(320, 180)
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=512866915]
+position = Vector2(0, 324)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=449024583]
+shape = SubResource("RectangleShape2D_l122j")
+debug_color = Color(0.63692373, 0.6282875, 0.8409189, 0.41960785)
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=1207309211]
+position = Vector2(1152, 324)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=161511991]
+shape = SubResource("RectangleShape2D_l122j")
+debug_color = Color(0.63692373, 0.6282875, 0.8409189, 0.41960785)
+
+[node name="TopWall" type="StaticBody2D" parent="." unique_id=751571798]
+position = Vector2(576, 0)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=1622751757]
+shape = SubResource("RectangleShape2D_wnyxq")
+
+[node name="BottomWall" type="StaticBody2D" parent="." unique_id=1271191460]
+position = Vector2(576, 648)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=1444001047]
+shape = SubResource("RectangleShape2D_wnyxq")
+
+[node name="GoalArea" type="Area2D" parent="." unique_id=1728000476]
+position = Vector2(900, 320)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_ddyht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea" unique_id=1179972922]
+shape = SubResource("RectangleShape2D_js437")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=768185474]
+
+[node name="StatusLabel" type="Label" parent="UI" unique_id=780107523]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 48.0
+text = "Goal alanının dışındasın"
